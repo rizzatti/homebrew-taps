@@ -7,7 +7,7 @@ class RabbitmqC < Formula
   sha1 '37029aa53d542ddc2a529fbb7c1d2edb7ad007c0'
   head 'https://github.com/alanxz/rabbitmq-c.git'
 
-  depends_on 'cmake'
+  depends_on 'cmake' => :build
 
   def install
     std_cmake_args << '-DFETCH_CODEGEN_FROM_GIT=1' unless build.head?
